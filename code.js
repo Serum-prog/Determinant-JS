@@ -27,21 +27,12 @@ function determinant(m) {
 };
 function GetMinorMatrix(row,col, m) {
   let numRows = m.length
-    console.log('nR',numRows)
   let numCol = m[0].length
-    console.log('nC',numCol)
-  
-     let  minor = []
+  let  minor = []
     for (let k = 0; k< numRows-1; k++){
      minor.push([])
     }
-    console.log ('Минор', minor)
-      let numR = minor.length
-    console.log('nR',numR)
-  let numC = minor[0].length
-    console.log('nC',numC)
   let rowIndex = 0
-  
   for (let i = 0; i<numRows; i++) {
     if (i == row) {
       continue
@@ -53,11 +44,8 @@ function GetMinorMatrix(row,col, m) {
         continue
       }
         let value = m[i][j]
-        console.log ('value',value)
         minor[i-1].push(value)
-        console.log('minor',minor)
         colIndex +=1
-        console.log ('colIndex = ',colIndex)
     }
     rowIndex +=1
   }

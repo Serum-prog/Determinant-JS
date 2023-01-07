@@ -32,22 +32,19 @@ function GetMinorMatrix(row,col, m) {
     for (let k = 0; k< numRows-1; k++){
      minor.push([])
     }
-  let rowIndex = 0
+
   for (let i = 0; i<numRows; i++) {
     if (i == row) {
       continue
     }
-   
-    let colIndex = 0
+
     for (let j = 0; j<numCol; j++) {
       if (j == col) {
         continue
       }
         let value = m[i][j]
         minor[i-1].push(value)
-        colIndex +=1
     }
-    rowIndex +=1
   }
   return minor
 }
